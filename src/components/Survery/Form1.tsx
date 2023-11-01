@@ -151,7 +151,7 @@ const Form1: React.FC = () => {
             </div>
 
             <div className="mb-2">
-              <Label for="interval" value="Interval (in days)" />
+              <Label for="interval" value="Interval (in seconds)" />
               <Field
                 as={TextInput}
                 type="number"

@@ -1,17 +1,14 @@
 import { useAppDispatch } from "../hooks/reduxHook";
 import { auth } from "../config/firebase";
-import { useNavigate } from "react-router-dom";
 import Button from "./PrimaryButton";
 import { signOut } from "firebase/auth";
 import { logout } from "../context/redux/AuthSlice";
 
 const Navbar = () => {
   const dispatch = useAppDispatch();
-  const navigate = useNavigate();
   const handleLogout = () => {
     signOut(auth).then(() => {
       dispatch(logout());
-      navigate("/login");
     });
   };
   return (
